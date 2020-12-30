@@ -45,7 +45,13 @@
     <ClCompile Include="Chapter 3 - guideline to prevent deadlocks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter 3 - Personal Project - Thread safe linked-list.cpp">
+    <ClCompile Include="Chapter 3 - Personal Project - Thread safe linked-list, not done.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 3 - Threadd-safe Stack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 3 - Simple Lock Hierarchical.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

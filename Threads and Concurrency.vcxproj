@@ -89,6 +89,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,7 +143,9 @@
   <ItemGroup>
     <ClCompile Include="Chapter 3 - Don%27t pass locked reference or pointer outside the lock in any way.cpp" />
     <ClCompile Include="Chapter 3 - guideline to prevent deadlocks.cpp" />
-    <ClCompile Include="Chapter 3 - Personal Project - Thread safe linked-list.cpp" />
+    <ClCompile Include="Chapter 3 - Personal Project - Thread safe linked-list, not done.cpp" />
+    <ClCompile Include="Chapter 3 - Simple Lock Hierarchical.cpp" />
+    <ClCompile Include="Chapter 3 - Threadd-safe Stack.cpp" />
     <ClCompile Include="Chapter 3 - Using mutex in c++.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />
