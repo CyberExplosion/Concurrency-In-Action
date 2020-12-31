@@ -54,5 +54,17 @@
     <ClCompile Include="Chapter 3 - Simple Lock Hierarchical.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter 3 - unique lock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 3 - Transfer lock ownership using unique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 3 - Locking at correct granularity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 3 - Protect data during initialization - Lazy init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
