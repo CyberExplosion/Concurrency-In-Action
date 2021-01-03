@@ -66,5 +66,17 @@
     <ClCompile Include="Chapter 3 - Protect data during initialization - Lazy init.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter 3 - Protect read write data with share lock %28rare update data%29.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 4 - Waiting for data to process with conditional variables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 4 - Thread safe Queue using condition variables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 14 - Using future to return values from background task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

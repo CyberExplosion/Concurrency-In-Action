@@ -141,16 +141,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Chapter 14 - Using future to return values from background task.cpp" />
     <ClCompile Include="Chapter 3 - Don%27t pass locked reference or pointer outside the lock in any way.cpp" />
     <ClCompile Include="Chapter 3 - guideline to prevent deadlocks.cpp" />
     <ClCompile Include="Chapter 3 - Locking at correct granularity.cpp" />
     <ClCompile Include="Chapter 3 - Personal Project - Thread safe linked-list, not done.cpp" />
     <ClCompile Include="Chapter 3 - Protect data during initialization - Lazy init.cpp" />
+    <ClCompile Include="Chapter 3 - Protect read write data with share lock %28rare update data%29.cpp" />
     <ClCompile Include="Chapter 3 - Simple Lock Hierarchical.cpp" />
     <ClCompile Include="Chapter 3 - Threadd-safe Stack.cpp" />
     <ClCompile Include="Chapter 3 - Transfer lock ownership using unique.cpp" />
     <ClCompile Include="Chapter 3 - unique lock.cpp" />
     <ClCompile Include="Chapter 3 - Using mutex in c++.cpp" />
+    <ClCompile Include="Chapter 4 - Thread safe Queue using condition variables.cpp" />
+    <ClCompile Include="Chapter 4 - Waiting for data to process with conditional variables.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />
     <ClCompile Include="Identifying threads.cpp" />
