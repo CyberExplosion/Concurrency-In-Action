@@ -75,7 +75,13 @@
     <ClCompile Include="Chapter 4 - Thread safe Queue using condition variables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter 14 - Using future to return values from background task.cpp">
+    <ClCompile Include="Chapter 4 - Using future to return values from background task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 4 - Using packaged_task to wrap future and pass task between threads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 4 - Using promise_future handling waiting and delivery in different thread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

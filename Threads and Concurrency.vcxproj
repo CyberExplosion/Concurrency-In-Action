@@ -141,7 +141,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter 14 - Using future to return values from background task.cpp" />
     <ClCompile Include="Chapter 3 - Don%27t pass locked reference or pointer outside the lock in any way.cpp" />
     <ClCompile Include="Chapter 3 - guideline to prevent deadlocks.cpp" />
     <ClCompile Include="Chapter 3 - Locking at correct granularity.cpp" />
@@ -154,6 +153,9 @@
     <ClCompile Include="Chapter 3 - unique lock.cpp" />
     <ClCompile Include="Chapter 3 - Using mutex in c++.cpp" />
     <ClCompile Include="Chapter 4 - Thread safe Queue using condition variables.cpp" />
+    <ClCompile Include="Chapter 4 - Using future to return values from background task.cpp" />
+    <ClCompile Include="Chapter 4 - Using packaged_task to wrap future and pass task between threads.cpp" />
+    <ClCompile Include="Chapter 4 - Using promise_future handling waiting and delivery in different thread.cpp" />
     <ClCompile Include="Chapter 4 - Waiting for data to process with conditional variables.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />

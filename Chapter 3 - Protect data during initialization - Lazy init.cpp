@@ -79,5 +79,7 @@
 //}
 //
 ////STATIC and CALL_ONCE are the same. However, with static you can only call it in one place. Using call_once, we have the associate once_flag to check and thus allow us to use call_once multiple time in our code
+///To clarify: Using static --> Your program initialization path is well define -> click this - then do this- then initialize - then continue
+		// Using call_once --> Your program init path is not well define , like in User interface app --> click this - if not init then do it --> do thing ==> another app, if not init ..
 ////ex above send_data and received_data both can initialize the connection, which sometime is a good thing
 ////if you use static, you have to determine which function is the one that allow to open a connection
