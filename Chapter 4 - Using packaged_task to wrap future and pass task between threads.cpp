@@ -42,7 +42,7 @@
 //
 ////A task is a perfect wrapper to use on another thread. When that thread finish, the future will be ready
 //int foo (double);
-//packaged_task<int (double)> task (foo);
+//packaged_task<int (double)> task (foo(5.6));
 //auto fut = task.get_future ();
 //
 //thread th (std::move (task), 1.5);	//Move the task into a thread, perfect for managing

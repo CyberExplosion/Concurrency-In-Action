@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
@@ -152,7 +152,11 @@
     <ClCompile Include="Chapter 3 - Transfer lock ownership using unique.cpp" />
     <ClCompile Include="Chapter 3 - unique lock.cpp" />
     <ClCompile Include="Chapter 3 - Using mutex in c++.cpp" />
+    <ClCompile Include="Chapter 4 - chrono, clocks and duration.cpp" />
+    <ClCompile Include="Chapter 4 - Functional Programming and QuickSort.cpp" />
+    <ClCompile Include="Chapter 4 - Saving exception for future.cpp" />
     <ClCompile Include="Chapter 4 - Thread safe Queue using condition variables.cpp" />
+    <ClCompile Include="Chapter 4 - Use Shared_future for wait() in many thread.cpp" />
     <ClCompile Include="Chapter 4 - Using future to return values from background task.cpp" />
     <ClCompile Include="Chapter 4 - Using packaged_task to wrap future and pass task between threads.cpp" />
     <ClCompile Include="Chapter 4 - Using promise_future handling waiting and delivery in different thread.cpp" />
