@@ -48,7 +48,7 @@
 //			break;
 //	}
 //		//You can also use the predicate version so that you don't have to use the while() loop
-//	cv.wait_until (guard, timeout, [&] () {return done; });		//Wait until time runout, or until the condition is check
+//	cv.wait_until (guard, timeout, [&] () {return done; });		//Wait until time runout, or until the condition is good
 //}
 //
 //void do_sth () {};

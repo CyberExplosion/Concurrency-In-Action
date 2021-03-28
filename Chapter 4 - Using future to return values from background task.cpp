@@ -53,3 +53,7 @@
 //};
 //
 //auto f5{ std::async (move_only ()) };
+
+/*
+Also since future have function to wait() and hold the result for the threaded function, you can thread.detach() the thread since u gona be using future to manage anyway
+*/

@@ -53,3 +53,6 @@
 //auto res2{ async (std::launch::async, func2) };	//Now we can have 2 threads waiting on the same future ---> AKA waiting on another thread maybe
 //
 ////Share_future only allow getting result MULTIPLE Times in MULTIPLE Threads - you still have to handle data race between multiple threads trying to get <shared_future> object
+
+/*
+SHARE FUTURE allow you to notify multiple threads like conditional variable .notify_all(). */
