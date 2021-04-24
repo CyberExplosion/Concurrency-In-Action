@@ -96,5 +96,17 @@
     <ClCompile Include="Chapter 4 - Functional Programming and QuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter 5 - Using atomic_flag to create a spin lock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 5 - Operation on atomic bool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 5 - Operation on atomic Pointers arthimetics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 5 - Free functions for atomic operation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

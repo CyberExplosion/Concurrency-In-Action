@@ -11,7 +11,7 @@
 //		\
 //		We need a lot of async --> However, that would also lead to a lot of threads. Since 1 async only spawn 1 threads, multiple call to async would be bad
 //	*/
-////Using promises, we can have ONE thread, doing MULTIPlE futures.
+////Using promises, we can have ONE thread, providing MULTIPlE futures.
 ///*
 //Ex: an arrya of multiple future would have array of multiple promises ==> in 1 thread. std::async would have trouble
 //

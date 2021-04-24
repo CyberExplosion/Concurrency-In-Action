@@ -161,6 +161,10 @@
     <ClCompile Include="Chapter 4 - Using packaged_task to wrap future and pass task between threads.cpp" />
     <ClCompile Include="Chapter 4 - Using promise_future handling waiting and delivery in different thread.cpp" />
     <ClCompile Include="Chapter 4 - Waiting for data to process with conditional variables.cpp" />
+    <ClCompile Include="Chapter 5 - Free functions for atomic operation.cpp" />
+    <ClCompile Include="Chapter 5 - Operation on atomic bool.cpp" />
+    <ClCompile Include="Chapter 5 - Operation on atomic Pointers arthimetics.cpp" />
+    <ClCompile Include="Chapter 5 - Using atomic_flag to create a spin lock.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />
     <ClCompile Include="Identifying threads.cpp" />
