@@ -161,9 +161,16 @@
     <ClCompile Include="Chapter 4 - Using packaged_task to wrap future and pass task between threads.cpp" />
     <ClCompile Include="Chapter 4 - Using promise_future handling waiting and delivery in different thread.cpp" />
     <ClCompile Include="Chapter 4 - Waiting for data to process with conditional variables.cpp" />
+    <ClCompile Include="Chapter 5 - Acquire release allow transitive synchronization.cpp" />
+    <ClCompile Include="Chapter 5 - Acquire Release imposed ordering on Relaxed Operations.cpp" />
     <ClCompile Include="Chapter 5 - Free functions for atomic operation.cpp" />
+    <ClCompile Include="Chapter 5 - Memory Order Consume to synchronize data - Don%27t do it.cpp" />
     <ClCompile Include="Chapter 5 - Operation on atomic bool.cpp" />
     <ClCompile Include="Chapter 5 - Operation on atomic Pointers arthimetics.cpp" />
+    <ClCompile Include="Chapter 5 - Reading and writting variables from different thread - Example of ordering happens-before.cpp" />
+    <ClCompile Include="Chapter 5 - Reading value from a queue with atomic operation - Release Sequence.cpp" />
+    <ClCompile Include="Chapter 5 - Sequential consistency implies a total ordering - How to derive ordering in seq_cst.cpp" />
+    <ClCompile Include="Chapter 5 - Uses Fence to impose order.cpp" />
     <ClCompile Include="Chapter 5 - Using atomic_flag to create a spin lock.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />
