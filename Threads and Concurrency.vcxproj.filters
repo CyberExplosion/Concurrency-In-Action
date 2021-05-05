@@ -132,5 +132,11 @@
     <ClCompile Include="Chapter 5 - Enforcing ordering on non-atomic - Usage of atomic irl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter 6 - Threaded safe stack using mutex - A class definition example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 6 - Thread safe queue using queue holding share pointer - Better exception handling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

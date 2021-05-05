@@ -173,6 +173,8 @@
     <ClCompile Include="Chapter 5 - Sequential consistency implies a total ordering - How to derive ordering in seq_cst.cpp" />
     <ClCompile Include="Chapter 5 - Uses Fence to impose order.cpp" />
     <ClCompile Include="Chapter 5 - Using atomic_flag to create a spin lock.cpp" />
+    <ClCompile Include="Chapter 6 - Thread safe queue using queue holding share pointer - Better exception handling.cpp" />
+    <ClCompile Include="Chapter 6 - Threaded safe stack using mutex - A class definition example.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />
     <ClCompile Include="Identifying threads.cpp" />
