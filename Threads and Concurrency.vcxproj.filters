@@ -138,5 +138,8 @@
     <ClCompile Include="Chapter 6 - Thread safe queue using queue holding share pointer - Better exception handling.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter 6 - Fine-Grained thread safe queue locking and waiting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
