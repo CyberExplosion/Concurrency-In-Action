@@ -109,3 +109,6 @@
 ///*
 //Most function involving moving pointers around is non-throw, so we are good
 //*/
+//void wow () {
+//
+//}

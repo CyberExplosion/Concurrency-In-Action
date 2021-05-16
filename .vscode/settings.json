@@ -1,0 +1,30 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
+    "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
+    "files.associations": {
+        "atomic": "cpp",
+        "cmath": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "xlocnum": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
+    },
+    "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
+    "C_Cpp.vcFormat.space.removeAroundUnaryOperator": false,
+    "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
+    "C_Cpp.vcFormat.space.beforeLambdaOpenParenthesis": true
+}
