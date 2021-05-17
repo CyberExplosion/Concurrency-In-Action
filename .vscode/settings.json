@@ -26,5 +26,6 @@
     "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "insert",
     "C_Cpp.vcFormat.space.removeAroundUnaryOperator": false,
     "C_Cpp.vcFormat.space.withinInitializerListBraces": false,
-    "C_Cpp.vcFormat.space.beforeLambdaOpenParenthesis": true
+    "C_Cpp.vcFormat.space.beforeLambdaOpenParenthesis": true,
+    "workbench.editor.showTabs": false
 }
