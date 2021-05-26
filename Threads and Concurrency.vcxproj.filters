@@ -160,6 +160,18 @@
       <Filter>Source Files\Chapter 6</Filter>
     </ClCompile>
     <ClCompile Include="Chapter 6 - Thread-safe list with iteration function support - finer grained.cpp">
+      <Filter>Source Files\Chapter 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 7 - Lock free stack using atomic share pointer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 7 - Lockfree stack using split reference counting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 7 - Reclaim leaked nodes using hazard pointers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter 7 - Reclaim leaked nodes using reference-counted.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

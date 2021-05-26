@@ -178,7 +178,11 @@
     <ClCompile Include="Chapter 6 - Thread safe queue using queue holding share pointer - Better exception handling.cpp" />
     <ClCompile Include="Chapter 6 - Thread-safe list with iteration function support - finer grained.cpp" />
     <ClCompile Include="Chapter 6 - Threaded safe stack using mutex - A class definition example.cpp" />
+    <ClCompile Include="Chapter 7 - Lock free stack using atomic share pointer.cpp" />
     <ClCompile Include="Chapter 7 - Lock-free stack with leaking memory (uses with garbage collector like Java).cpp" />
+    <ClCompile Include="Chapter 7 - Lockfree stack using split reference counting.cpp" />
+    <ClCompile Include="Chapter 7 - Reclaim leaked nodes using hazard pointers.cpp" />
+    <ClCompile Include="Chapter 7 - Reclaim leaked nodes using reference-counted.cpp" />
     <ClCompile Include="choose num threads at run time.cpp" />
     <ClCompile Include="Function object practice.cpp" />
     <ClCompile Include="Identifying threads.cpp" />
