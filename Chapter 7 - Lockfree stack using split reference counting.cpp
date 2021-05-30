@@ -2,6 +2,9 @@
 #include <memory>
 using namespace std;
 
+//! External count (increase) = before accessing data in the node
+//! Internal count (decrease) = after finish working in the node
+
 //? We need both an inside and outside counter
 /**
  *? Inside counter to check and make sure that we can delete the nodes while already insdie
@@ -49,7 +52,7 @@ using namespace std;
      void push (T const& data) {
          count_node_ptr neoNode;
          neoNode.ptr = new node (data);
-         neoNode.external_count = 1; //One referencing the node right now (the head pointer)
+         neoNode.external_count = 1; //One referencing the node right now (the head pointer, when the head got move then it's going to be the previous node in the list)
          neoNode.ptr->next = head.load ();
          while (!head.compare_exchage_weak (neoNode.ptr->next, neoNode));    //Head points right here
      }
@@ -106,6 +109,6 @@ struct node {
 
 int main () {
     atomic<count_node_ptr> yeh;
-    if (yeh.is_lock_free())
+    if (yeh.is_lock_free ())
         printf ("E");
 }
