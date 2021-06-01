@@ -70,6 +70,12 @@ public:
         while (true) {
             increase_external_count (tail, old_tail);   //We about to access the tail node, increment the external count
             T* old_data = nullptr;
+            //! If this condition clear, other threads have to wait for this thread to finish --> busy wait = not lock free
+            /**
+             ** When the condition passed, the old_tail.ptr will get a value and no longer nullptr.
+             ** Then the tail doesn't get changed until the "tail.exchange(neo_next)"
+             ** This make the time between the operation till the tail.exchange(neo_next) a waiting time ==> a lock
+            */
             if (old_tail.ptr->data.compare_exchange_strong (old_data, neo_data.get ())) {   //Only go through if the data is still nullptr (aka no thread has change the tail)
                 //Now has acquire the tail successfully
                 old_tail.ptr->next = neo_next;
@@ -91,6 +97,11 @@ public:
                 ptr->release_ref ();    //Remove all counts to the node
                 return unique_ptr<T> ();
             }
+            //! This condition doesn't block other threads
+            /**
+             ** It's because other thread only need to acquire the head to continue on their operation. And the head only change ONCE, when the condition pass
+             ** so no busy wait ==> Fine
+            */
             if (head.compare_exchange_strong (old_head, ptr->next)) {
                 T* const res = ptr->data.exchange (nullptr);   //Remove the data from the node after retrieve it
                 free_external_counter (old_head);   //The head counter no longer need this node
@@ -109,8 +120,8 @@ void lockfree_queue<T>::node::release_ref () {
         neo_counter = old_counter;
         --neo_counter.internal_count;
     } while (!count.compare_exchange_strong (old_counter, neo_counter, memory_order_acquire, memory_order_relaxed));
-        //* strong because if fail spuriously, have to go through 2 operation again, wasteful
-        //* also the memory order is there to follow closely as the memory order uses in lockfree stack method
+    //* strong because if fail spuriously, have to go through 2 operation again, wasteful
+    //* also the memory order is there to follow closely as the memory order uses in lockfree stack method
     if (!neo_counter.internal_count && !neo_counter.external_counters) {    //When both are 0, nothing reference the node anymore
         delete this;    //this here is the node, not the queue
     }
@@ -125,6 +136,12 @@ static void lockfree_queue<T>::increase_external_count (atomic<counted_node_ptr>
         ++neo_counter.external_count;
     } while (!counter.compare_exchange_strong (old_counter, neo_counter, memory_order_acquire, memory_order_relaxed));
     old_counter.external_count = neo_counter.external_count;    //Update both the counter, and the old_counter
+        //* At this point the tail = old_tail again
+    /**
+     * (counter = tail, old_counter = old_tail)
+     * The loop condition set tail = neo_counter, then afterward old_tail = neo_counter ==> tail = old_tail
+     */
+
 }
 
 template <typename T>
@@ -142,3 +159,13 @@ static void lockfree_queue<T>::free_external_counter (counted_node_ptr& old_node
         delete ptr;
     }
 }
+
+/**
+ * *Problem: While one thread is using push(), if it passed the compare_exchange, no other thread can make any progress
+ ** It's essentially a busy lock, the first push() will block other thread until it complete ==> No longer lock free
+ *! Create a way to make waiting thread HELP the locked thread ==> therefore no thread will sit around doing nothing ==> no more busy wait
+ * Definition of lock free:  When running for a time, if one thread is suspend (stuck working), other thread can still make progress
+ *? In general, a lock-free algorithm can run in four phases: completing one's own operation, assisting
+ *? an obstructing operation, aborting an obstructing operation, and waiting. Completing one's own operation is
+ *? complicated by the possibility of concurrent assistance and abortion, but is invariably the fastest path to completion.
+ */
