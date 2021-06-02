@@ -34,7 +34,7 @@ using namespace std;
              ++neoCounter.external_count;
          } while (!head.compare_exchange_strong (old_counter, neoCounter));  //Since we in a stack, this is to make
              //sure that no other thread has changed the head --> Of course use this after you set old_counter = head
-         old_counter.external_count = neoCounter.external_count;
+         old_counter.external_count = neoCounter.external_count;    //You are both accessing the head and the old_counter, so increment both of them in a sense
      }
  public:
      lockfree_stack () = default;
