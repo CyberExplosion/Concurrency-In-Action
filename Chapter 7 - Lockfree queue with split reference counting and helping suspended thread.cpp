@@ -72,7 +72,7 @@ public:
                 if (!old_tail.ptr->next.compare_exchange_strong (old_next, new_next)) { //The old_tail->next node (aka dummy node) is already been dealt with
                     //* Also, old_next is assigned the pointer the other thread helped make after this condition
                     delete new_next.ptr;    //We no longer need the node we create at begining
-                    new_next = old_next;    //Now we get the pointer the other thread helped created
+                    new_next = old_next;    //old_next will point to the tail that other thread has helped with
                 }
                 set_new_tail (old_tail, new_next);  //Tail is assigned the new_next, there's a chance other thread already helped moving the tail
                 new_data.release ();
@@ -135,11 +135,8 @@ static void lockfree_queue<T>::increase_external_count (atomic<counted_node_ptr>
         ++neo_counter.external_count;
     } while (!counter.compare_exchange_strong (old_counter, neo_counter, memory_order_acquire, memory_order_relaxed));
     old_counter.external_count = neo_counter.external_count;    //Update both the counter, and the old_counter
-        //* At this point the tail = old_tail again
-    /**
-     * (counter = tail, old_counter = old_tail)
-     * The loop condition set tail = neo_counter, then afterward old_tail = neo_counter ==> tail = old_tail
-     */
+        //* The counter (tail or head) may have change after the while loop, but the counter for old_tail (or old_head) external must be
+        //* increase after calling this function. That's what this function job is
 
 }
 
