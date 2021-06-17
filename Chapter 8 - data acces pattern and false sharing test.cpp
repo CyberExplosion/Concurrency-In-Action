@@ -1,4 +1,5 @@
 #include <mutex>
+#include <new>
 using namespace std;
 
 struct my_data {};
@@ -28,10 +29,10 @@ struct data_item {};
  * Each element of my_data is going to be accessed by different thread
  ** Therefore, it's better to padded them out so that each element doesn't stay on same cache line
 */
-struct my_data {
+struct my_stuff {
     data_item d1;
     data_item d2;
     char padding[std::hardware_destructive_interference_size];  //* This padding will guarantee other element be on a different cache line
 };
-my_data some_array[256];    //! With the padding, each element is there own cache line
+my_stuff some_array[256];    //! With the padding, each element is there own cache line
 
